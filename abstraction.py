@@ -26,16 +26,40 @@ class Vehicle(ABC):
 
 
 class Car(Vehicle):
-    pass
+
+    def calculate_rental_cost(hours):
+        pass
+
+    def get_vehicle_type():
+        pass
 
 
 class Bike(Vehicle):
-    pass
+
+    def calculate_rental_cost(hours):
+        pass
+
+    def get_vehicle_type():
+        pass
 
 
-class Truck(Vechicle):
-    pass
+class Truck(Vehicle):
+
+    def calculate_rental_cost(hours):
+        pass
+
+    def get_vehicle_type():
+        pass
 
 
-class RentalService(Vehicle):
-    pass
+class RentalService:
+
+    def __init__(self, total: int = 0):
+        self.list_of_vechicles = [Car(), Bike(), Truck()]
+        self.total = total
+
+    def list_vehicles(self):
+        return self.list_of_vechicles
+
+rental = RentalService()
+print(rental.list_vehicles())
